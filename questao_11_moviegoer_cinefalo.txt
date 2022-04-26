@@ -1,0 +1,33 @@
+class NotMovieClubMemberError < RuntimeError
+end
+
+class Moviegoer
+  def initialize(age, member: false)
+    @age = age
+    @member = member
+  end
+
+  def ticket_price
+    if @age >= 60
+      return 10
+    else
+    return 15
+    end
+  end
+
+  def watch_scary_movie?
+    if @age >= 18
+      return true
+    else
+    return false
+    end
+  end
+
+  def claim_free_popcorn!
+    if @member
+      return '🍿'
+    else 
+    raise NotMovieClubMemberError
+    end
+  end
+end
