@@ -1,0 +1,10 @@
+a = gets.chomp.split( / / )
+x = a[0].to_i
+y = a[1].to_i
+
+if x >= y
+  a = (y + 24) - x
+elsif x < y 
+  a = y - x
+end
+puts "O JOGO DUROU #{a} HORA(S)"
