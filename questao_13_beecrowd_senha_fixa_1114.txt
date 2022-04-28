@@ -1,0 +1,8 @@
+s = 0
+while s != 2002
+  s = gets.chomp.to_i
+  if s != 2002
+    puts "Senha Invalida"
+  end
+end
+puts "Acesso Permitido"
